@@ -95,7 +95,6 @@
 
     <div class="space-y-3">
 
-        <!-- TRANSFER -->
 <label class="flex items-center p-3 border rounded-lg cursor-pointer hover:bg-gray-50">
             <input type="radio" name="payment_method" value="upload_payment"
                 {{ old('payment_method', 'upload_payment') == 'upload_payment' ? 'checked' : '' }}
@@ -106,7 +105,9 @@
                 <div class="text-sm text-gray-500">Upload bukti pembayaran</div>
             </div>
         </label>
-        <div id="upload_field" class="mt-3 ml-8 {{ old('payment_method', 'upload_payment') == 'upload_payment' ? '' : 'hidden' }}">
+        <div id="upload_field" class="mt-3 {{ old('payment_method', 'upload_payment') == 'upload_payment' ? '' : 'hidden' }}">
+                    <h1 class="font-bold">Nomor Rekening: 008272719</h1>
+
             <label class="block text-gray-700 font-bold mb-2">Bukti Pembayaran <span class="text-red-500">*</span></label>
             <input type="file" name="foto_payment" accept="image/*" class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500" >
             @error('foto_payment')

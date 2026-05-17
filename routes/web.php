@@ -11,6 +11,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware('auth')->group(function(){
     Route::get('/dashboard', [ProductController::class, 'showProductToUser']);
+Route::get('/dashboard/chat', [ChatController::class, 'index']);
+Route::post('/dashboard/chat', [ChatController::class, 'store']);
 
     Route::delete('/dashboard/cart/{id}', [CartController::class, 'destroy']);
     Route::post('/dashboard/checkout', [OrderController::class, 'store'])->name('checkout');

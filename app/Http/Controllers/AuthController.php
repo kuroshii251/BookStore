@@ -49,7 +49,7 @@ class AuthController extends Controller
 
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
-            if ($credentials['email'] == 'admin1234@gmail.com' && $credentials['password'] == 'Admin123') {
+            if ($credentials['email'] == 'admin@gmail.com' && $credentials['password'] == 'Admin123') {
                 return redirect()->to('/admindashboard');
             }
                     return redirect()->to('/dashboard');
